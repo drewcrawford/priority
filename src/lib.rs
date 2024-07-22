@@ -1,7 +1,10 @@
+use std::fmt::Display;
+
 /**
 Defines an abstract priority for tasks.
 */
 #[non_exhaustive]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub enum Priority {
     /**
     The task runs at UI priority.
@@ -38,4 +41,15 @@ pub enum Priority {
     Use this priority for tasks that are not visible to the user, and do not require user input.
     */
     Background
+}
+
+impl Display for Priority {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            Priority::UserInteractive => write!(f, "UserInteractive"),
+            Priority::UserInitiated => write!(f, "UserInitiated"),
+            Priority::Utility => write!(f, "Utility"),
+            Priority::Background => write!(f, "Background"),
+        }
+    }
 }
