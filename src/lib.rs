@@ -53,3 +53,14 @@ impl Display for Priority {
         }
     }
 }
+
+impl Priority {
+    /**
+    Returns the highest priority that is suitable for general, blocking, async work.
+
+    At the time of this writing, this returns [Priority::UserInitiated].
+    */
+    pub const fn highest_async() -> Self {
+        Priority::UserInitiated
+    }
+}
