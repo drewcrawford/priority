@@ -63,4 +63,11 @@ impl Priority {
     pub const fn highest_async() -> Self {
         Priority::UserInitiated
     }
+
+    /**
+    A priority suitable for unit testing.
+    */
+    pub const fn unit_test() -> Self {
+        Priority::UserInitiated
+    }
 }
