@@ -1,6 +1,17 @@
 [package]
 name = "priority"
 version = "0.1.0"
+authors = ["Drew Crawford <drew@sealedabstract.com>"]
 edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "A thread/task priority type"
+homepage = "https://sealedabstract.com/code/priority"
+repository = "https://github.com/drewcrawford/priority"
+keywords = ["priority", "threading", "async"]
+rust-version = "1.56.1"
+
+categories = []
+
+
 
 [dependencies]
