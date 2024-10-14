@@ -9,6 +9,7 @@ homepage = "https://sealedabstract.com/code/priority"
 repository = "https://github.com/drewcrawford/priority"
 keywords = ["priority", "threading", "async"]
 rust-version = "1.56.1"
+exclude = [".*","art"]
 
 categories = []
 
