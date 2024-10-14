@@ -1,0 +1,4 @@
+priority https://sealedabstract.com/code/priority
+A thread/task priority type for Rust
+Copyright 2024 Drew Crawford.
+
