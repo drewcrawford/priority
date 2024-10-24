@@ -6,7 +6,6 @@ This crate defines an abstract set of priorities for tasks or threads.  For exam
 
 This crate does not do anything; it simply defines a type used to coordinate behaviors between parts of a program.
 */
-use std::fmt::Display;
 
 /**
 Defines an abstract priority for tasks.
@@ -48,19 +47,18 @@ pub enum Priority {
 
     Use this priority for tasks that are not visible to the user, and do not require user input.
     */
-    Background
+    Background,
+
+    /**
+    The priority of the task is not known.
+
+    Avoid the use of this value.  It should be used in cases where the priority cannot be reasonably
+    determined.
+    */
+    Unknown
 }
 
-impl Display for Priority {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match self {
-            Priority::UserInteractive => write!(f, "UserInteractive"),
-            Priority::UserInitiated => write!(f, "UserInitiated"),
-            Priority::Utility => write!(f, "Utility"),
-            Priority::Background => write!(f, "Background"),
-        }
-    }
-}
+
 
 impl Priority {
     /**
